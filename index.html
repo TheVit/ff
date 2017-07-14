@@ -1,0 +1,623 @@
+<html>
+
+<head>
+  <title>ProfiGryz</title>
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="Content-Type" content="text/html; charset=win-1251" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Zilla+Slab" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+  crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  <script>
+  function ScrollTo(name) {
+    ScrollToResolver(document.getElementById(name));
+  }
+
+  function ScrollToResolver(elem) {
+    var jump = parseInt(elem.getBoundingClientRect().top * .4);
+    document.body.scrollTop += jump;
+    document.documentElement.scrollTop += jump;
+    if (!elem.lastjump || elem.lastjump > Math.abs(jump)) {
+      elem.lastjump = Math.abs(jump);
+      setTimeout(function() { ScrollToResolver(elem);}, "100");
+    } else {
+      elem.lastjump = null;
+    }
+  }
+
+  map.disableScrollWheelZoom();
+
+  $("body").on("contextmenu", false);
+
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="hero-mob">
+      <header>
+        <div class="container">
+         <nav class="navbar navbar-fixed-top navbar-inverse bg-primary">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+            <a href="#nav"></a><img src="./src/pg-logo.png" style="width: 55px; height: 55px; padding: 3px; font-family: 'Zilla Slab', serif;">
+            <div class="col-1">
+            <p class= "col-3 mob-title" style="font-family: 'Zilla Slab', serif;">ProfiGryz</p>
+
+            </div>
+            <div class="col-3 mob-phone" style="font-size: 15px">
+              +38(050)985-62-21<br>
+              +38(068)925-54-00<br>
+              +38(093)321-05-43<br>
+            </div>
+         <br><br>
+          
+          <div class="navbar-collapse collapse justify-content-end" id="collapsingNavbar">
+            
+            <ul class="navbar-nav-mob" id="nav_menu">
+              <li >
+                <button class="btn nav-btn" onclick="ScrollTo('sec-prem')" >Услуги и цены</button>
+              </li>
+              <li >
+                <button class="btn nav-btn" onclick="ScrollTo('sec-price')" >Прeимущества</button>
+              </li>
+              <li >
+                <button class="btn nav-btn" onclick="ScrollTo('sec-prc')">Стоимость</button>
+              </li>
+              <li >
+                <button class="btn nav-btn" onclick="ScrollTo('sec-contact')">Вакансии</button>
+              </li>
+              <li >
+                <button class="btn nav-btn" onclick="ScrollTo('footer')">Контакты</button>
+              </li>
+            </ul>
+
+          </div>
+        </nav>
+      </div>
+    </header>
+  </section>
+  
+
+  <section class="hero">
+      <header>
+        <div class="container">
+          <nav class="navbar navbar-light navbar-toggleable-sm text-white" id="nav">
+            <a href="#nav"></a><img src="./src/pg-logo.png" style="width: 55px; height: 55px; padding: 3px; font-family: 'Zilla Slab', serif;">
+            <p style="font-family: 'Zilla Slab', serif;">ProfiGryz</p>
+            <div class="col-1">
+
+            </div>
+            <div class="col-3" style="font-size: 15px">
+              +38(050)985-62-21<br>
+              +38(068)925-54-00<br>
+              +38(093)321-05-43<br>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right text-white" type="button" data-toggle="collapse" data-target="#headerNav"
+            aria-controls="headerNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="headerNav" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <button class="btn nav-btn" onclick="ScrollTo('sec-prem')" >Услуги и цены</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn nav-btn" onclick="ScrollTo('sec-price')" >Прeимущества</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn nav-btn" onclick="ScrollTo('sec-prc')">Стоимость</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn nav-btn" onclick="ScrollTo('sec-contact')">Вакансии</button>
+              </li>
+              <li class="nav-item">
+                <button class="btn nav-btn" onclick="ScrollTo('footer')">Контакты</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </section>
+
+  
+  <section>
+    <div class="jumbotron jumbotron-fluid mb-0 mob-img">
+      <div class="row justify-content-center">
+        <div class="col justify-content-center">
+          <div class="white text-left" style="margin: 15px">
+            <div class="row mt-12 pl-4">
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center color-white mob-text">
+        <div class="col-8">
+          <h1 class="mob-h1" style="line-height: 50px;">У Вас есть тяжелая работа для нас?<br>
+            - Мы готовы выполнить ее сегодня!
+          </h1>
+          <br>
+          <div class="jumbo-panel ">
+            <h2 class="mob-h2">Грузчики от 50 грн!</h2>
+          </div>
+          <br>
+          <h2 class="mob-h2_2">
+            Круглосуточно, без выходных!
+          </h2>
+        </div>
+        <div class="col-3 justify-content-left">
+          <div class="services">
+            <h3>
+              Заказ грузчиков в Харькове
+            </h3>
+            <br>
+            <p>- Перевозка мебели</p>
+            <p>- Вывоз строймусора</p>
+            <p>- Подьем стройматериалов</p>
+            <br><br>
+            <div class="row justify-content-center">
+              <div class="col justify-content-center" style="text-align: center;padding-left: 35px;">
+                <a data-toggle="modal" href="#myModal1">
+                  <div class="panel-button text-center btn-lg">
+                    <h4>Заказать</h4>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section id="sec-prem" name="sec-routes" class="sec-pricing"> -->
+  <div class="container text-center content-al-mob">
+    <br>
+    <div class="row">
+      <div class="col">
+
+      </div>
+      <div class="col">
+        <div class="title-sec text-center title-mob" style="height: 50px; width: 300px; padding: 10px;">
+          <h4>Наши услуги и цены</h4>
+        </div>
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+      <div class="col col-pad">
+        <div class="panel" sstyle="background: url(src/gru1.gif) no-repeat; background-size: cover">
+          <!-- panel content -->
+          <img class="panel-img" src="src/krog-mos.jpg" alt="">
+          <br>
+          <div class="row text-center text-white">
+
+            <div class="col">
+              <h5>Грузчики</h5>
+            </div>
+            <div class="col">
+              <h5>
+                от 50 грн/час
+              </h5>
+            </div>
+          </div>
+          <br>
+          <div class="row panel-price text-left mx-1 px-2">
+            Для складов, строек, гипермаркетов, магазинов, заводов, фарик и других объектов
+          </div>
+          <br>
+          <a data-toggle="modal" href="#myModal1">
+            <div class="panel-button text-center">
+              <h4>Заказать</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col col-pad">
+        <div class="panel" sstyle="background: url(src/gru2.gif) no-repeat; background-size: cover">
+          <!-- panel content -->
+          <img class="panel-img" src="src/gruzch1.jpg" alt="">
+          <br>
+          <div class="row text-center text-white">
+
+            <div class="col pr-0 text-right">
+              <h5>Разнорабочие</h5>
+            </div>
+            <div class="col">
+              <h5>
+                от 50 грн/час
+              </h5>
+            </div>
+          </div>
+          <br>
+          <div class="row panel-price text-left mx-1 px-2">
+            Упаковщики, фасовщики и другие подсобные рабочие с большой областью охвата специализаций
+          </div>
+          <br>
+          <a data-toggle="modal" href="#myModal1">
+            <div class="panel-button text-center">
+              <h4>Заказать</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col col-pad">
+        <div class="panel" sstyle="background: url(src/gru3.gif) no-repeat; background-size: cover">
+          <!-- panel content -->
+          <img class="panel-img" src="src/gruzch2.jpg" alt="">
+          <br>
+          <div class="row text-center text-white">
+
+            <div class="col pl-3">
+              <h5>Подсобные рабочие</h5>
+            </div>
+            <div class="col">
+              <h5>
+                от 50 грн/час
+              </h5>
+            </div>
+          </div>
+          <div class="row panel-price text-left mx-1 px-2">
+            Выполнение подсобных и вспомогательных работ на стройках, складах и базах
+          </div>
+          <br>
+          <a data-toggle="modal" href="#myModal1">
+            <div class="panel-button text-center">
+              <h4>Заказать</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+
+   
+    <br>
+    <br>
+    
+      <div class="col col-pad">
+        <div class="panel" sstyle="background: url(src/gru4.gif) no-repeat; background-size: cover">
+          <!-- panel content -->
+          <img class="panel-img" src="src/zem.jpg" alt="">
+          <br>
+          <div class="row text-center text-white">
+
+            <div class="col">
+              <h5>Земляные работы</h5>
+            </div>
+            <div class="col">
+              <h5>
+                от 50 грн/час
+              </h5>
+            </div>
+          </div>
+          <div class="row panel-price text-left mx-1 px-2">
+            Копка траншей, ям, котлованов, бассейнов, клумб, фундаментов и прочих земляных работ
+          </div>
+          <br>
+          <a data-toggle="modal" href="#myModal1">
+            <div class="panel-button text-center">
+              <h4>Заказать</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col col-pad">
+        <div class="panel" sstyle="background: url(src/gru5.gif)) no-repeat; background-size: cover">
+          <!-- panel content -->
+          <img class="panel-img" src="src/gruzch4.jpg" alt="">
+          <br>
+          <div class="row text-center text-white">
+
+            <div class="col">
+              <h5>Переезды</h5>
+            </div>
+            <div class="col">
+              <h5>
+                от 50 грн/час
+              </h5>
+            </div>
+          </div>
+          <br>
+          <div class="row panel-price text-left mx-1 px-2">
+            Офисные переезды, <br>
+            квартирные переезды, <br>
+            погрузка мебели
+          </div>
+          <br>
+          <a data-toggle="modal" href="#myModal1">
+            <div class="panel-button text-center">
+              <h4>Заказать</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col col-pad">
+        <div class="panel" sstyle="background: url(src/gru6.gif) no-repeat; background-size: cover">
+          <!-- panel content -->
+          <img class="panel-img" src="src/demo.jpg" alt="">
+          <br>
+          <div class="row text-center text-white">
+
+            <div class="col">
+              <h5>Демонтаж</h5>
+            </div>
+            <div class="col">
+              <h5>
+                от 50 грн/час
+              </h5>
+            </div>
+          </div>
+
+          <br>
+          <div class="row panel-price text-left mx-1 px-2">
+            Демонтаж стен, перегородок, стяжки, плитки, штукатурки, линолеума и паркетной доски
+          </div>
+          <br>
+          <a data-toggle="modal" href="#myModal1">
+            <div class="panel-button text-center">
+              <h4>Заказать</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal hide center" id="myModal1">
+    <div class="modal-header" style="border-radius: 6px 6px 0 0;">
+      <h4 class="col">Оставьте нам Ваш нормер телефона и мы Вам перезвоним</h4>
+    </div>
+    <div class="modal-body">
+      <form action="https://formspree.io/themaulmartin@gmail.com" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control" name="Имя" placeholder="Ваше имя" id="name" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="Номер телефона" placeholder="Номер телефона" id="extra_phone_number" />
+        </div>
+        <div class="form-group">
+          <input type="email" hidden class="form-control" name="Обратный адрес" value="dont@reply.me" placeholder="Электронная почта" id="reply_to" />
+        </div>
+        <div class="form-group">
+          <textarea name="Сообщение" class="form-control" placeholder="Сообщение" rows="2"></textarea>
+        </div>
+        <input id="submit_form" class="btn btn-default" type="submit" value="Отправить" />
+      </form>
+      <script>
+      var submitButton = document.getElementById("submit_form");
+      var form = document.getElementById("email_form");
+      form.addEventListener("submit", function (e) {
+        setTimeout(function () {
+          submitButton.value = "Sending...";
+          submitButton.disabled = true;
+        }, 1);
+      });
+      </script>
+    </div>
+    <div class="modal-footer" style="border-radius: 0 0 6px 6px;">
+      <a href="#" class="btn r_btn dismiss_btn" data-dismiss="modal">Закрыть</a>
+    </div>
+  </div>
+</section>
+<section id="sec-price" name="sec-features" class="sec-features ">
+  <div class="green-panel" style="padding-top: 15px; padding-bottom: 15px;">
+    <br>
+    <div class="row justify-content-center">
+      <h2>Наши преимущества</h2>
+    </div>
+    <div class="row justify-content-center" style="margin-top: 40px;margin-bottom: 60px;">
+      <div class="col ml-5 text-left mob-desc">
+        <img class="prem-img" src="src/cach.png" alt=""><br><br>
+        <b>Качество<br></b>
+        Подбираем рабочий<br>
+        персонал по системе<br>
+        рейтинга<br>
+      </div>
+      <div class="col ml-5 text-left mob-desc">
+        <img class="prem-img" src="src/strategy.png" alt=""><br><br>
+        <b>Стратегия<br></b>
+        Используем уникальную<br>
+        IT систему и базу наших<br>
+        работников<br>
+      </div>
+      <div class="col ml-5 text-left mob-desc">
+        <img class="prem-img" src="src/exp.png" alt=""><br><br>
+        <b>Опыт<br></b>
+        Работаем по проверенной<br>
+        и надежной технологии<br>
+        крупной сети<br>
+      </div>
+      <div class="col ml-5 text-left mob-desc">
+        <img class="prem-img" src="src/uah.png" alt=""><br><br>
+        <b>Выгода<br></b>
+        Индивидуальная цена<br>
+        для каждого нашего<br>
+        клиента<br>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="sec-prc" name="sec-about" class="sec-about "><!--pt-5 pb-5-->
+  <h2 class="text-center">Стоимость Услуг</h2>
+  <br><br>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="text-center"><h5><b>Грузчики разнорабочие</b></h5></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-1">
+
+      </div>
+      <div class="col">
+        <b>Услуги	<br></b>
+        Грузчик (по-часово)<br>
+        Грузчик (человеко/день)<br>
+        Разгрузка/погрузка стройматериала<br>
+        - мешок (без лифта)<br>
+        - мешок (с лифтом) <br>
+        - кирпич (без лифта) <br>
+        - кирпич (с лифтом)<br>
+        - газоблок, пеноблок (без лифта) <br>
+        - газоблок, пеноблок (с лифтом) <br>
+        - гипсокартон, ДСП, ДВП, OSB <br>
+        Земельные работы (копка котлованов, траншей и т.д.)<br>
+        Грузовое авто (почасово) <br>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="col">
+        <b>Cтоимость<br></b>
+        от 60 грн./час (минимум 2 часа)<br>
+        (человеко/день) от 300 грн.<br>
+        минимальный заказ 150 грн.<br>
+        от 1.5 грн./этаж<br>
+        от 4 грн./мешок<br>
+        от 25 коп./этаж<br>
+        от 70 коп./штука<br>
+        от 75 коп./этаж<br>
+        от 2 грн./штука<br>
+        от 3 грн./этаж<br>
+        от 150 грн. кв.м.<br>
+        150 грн./час (минимум 2 часа)<br>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</section>
+
+
+<!-- CONTACT SECTION -->
+<section id="sec-contact" name="sec-contact" class="sec-contact pt-5 pb-5">
+  <div class="container" style="padding: 45px">
+    <div class="row justify-content-center">
+      <div class="col">
+        <div class="row">
+          <div class="col-8">
+            <h2>Наши вакансии:</h2>
+            <br>
+            <h5>
+              <!-- <h5 class="contact-info">
+              Нам нужны: -->
+              <p class="contact-info">-грузчики;</p>
+              <p class="contact-info">-разнорабочие.</p>
+              <br> Чтобы начать работать просто заполните анкету –
+              мы найдем работу рядом с вашим домом.<br>
+              Хотите узнать подробнее об условиях
+              работы?
+            </h5>
+          </div>
+          <div class="col">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-lg-4 panel-blue">
+        <br>
+        <h4 class="contact-header">Оставьте свою заявку и мы Вам перезвоним</h4>
+        <br><br>
+        <form action="https://formspree.io/profigryz@gmail.com" method="POST">
+          <div class="form-group">
+            <input type="text" class="form-control" name="Имя" placeholder="Ваше имя" id="name" />
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="Номер телефона" placeholder="Номер телефона" id="extra_phone_number" />
+          </div>
+          <div class="form-group">
+            <input type="email" hidden class="form-control" name="Обратный адрес" value="dont@reply.me" placeholder="Электронная почта" id="reply_to" />
+          </div>
+          <div class="form-group">
+            <textarea name="Сообщение" class="form-control" placeholder="Сообщение" rows="4"></textarea>
+          </div>
+          <input id="submit_form" class="btn btn-default" type="submit" value="Отправить" />
+        </form>
+        <script>
+        var submitButton = document.getElementById("submit_form");
+        var form = document.getElementById("email_form");
+        form.addEventListener("submit", function (e) {
+          setTimeout(function () {
+            submitButton.value = "Sending...";
+            submitButton.disabled = true;
+          }, 1);
+        });
+        </script>
+      </div>
+    </div>
+  </div>
+  <div class="text-center important-sec">
+    Работаем круглосуточно и без выходных<br>
+    Звоните: +38(050)985-62-21,
+    +38(068)925-54-00 или
+    +38(093)321-05-43
+  </div>
+</section>
+
+<section>
+  <div id="map"></div>
+  <script>
+  function initMap() {
+    var uluru = {lat: 49.9883667, lng: 36.2439578};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: uluru,
+      scrollwheel:  false
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAyjM1bZc6cKWnAtdC5XlFhDducpL12_0&callback=initMap">
+  </script>
+</section>
+
+
+
+
+<footer id="footer" class="text-center">
+  <div class="row justify-content-between">
+    <div class="col mx-3 my-5">
+      <p class="text-white">
+        <img class="ajg-logo" src="./src/AJG.jpg"/>
+        ArtJoker Group</p>
+      </div>
+      <div class="col text-white my-5">
+        г. Харьков
+      </div>
+      <div class="col text-white my-4">
+        +38(050)985-62-21<br>
+        +38(068)925-54-00<br>
+        +38(093)321-05-43<br>
+      </div>
+      <div class="col text-white mx-3 my-5">
+        profigryz@gmail.com
+      </div>
+    </div>
+
+  </footer>
+
+
+</div>
+</body>
+
+</html>
